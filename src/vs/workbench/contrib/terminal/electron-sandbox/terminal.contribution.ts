@@ -15,7 +15,7 @@ import { TerminalNativeContribution } from 'vs/workbench/contrib/terminal/electr
 import { ElectronTerminalProfileResolverService } from 'vs/workbench/contrib/terminal/electron-sandbox/terminalProfileResolverService';
 import { LifecyclePhase } from 'vs/workbench/services/lifecycle/common/lifecycle';
 import { LocalTerminalBackendContribution } from 'vs/workbench/contrib/terminal/electron-sandbox/localTerminalBackend';
-
+import { registerTerminalActions } from 'vs/workbench/contrib/terminal/electron-sandbox/terminalActions';
 // Register services
 registerSharedProcessRemoteService(ILocalPtyService, TerminalIpcChannels.LocalPty, { supportsDelayedInstantiation: true });
 registerSingleton(ITerminalProfileResolverService, ElectronTerminalProfileResolverService, true);
@@ -25,3 +25,5 @@ const workbenchRegistry = Registry.as<IWorkbenchContributionsRegistry>(Workbench
 workbenchRegistry.registerWorkbenchContribution(LocalTerminalBackendContribution, LifecyclePhase.Starting);
 workbenchRegistry.registerWorkbenchContribution(TerminalNativeContribution, LifecyclePhase.Ready);
 workbenchRegistry.registerWorkbenchContribution(ExternalTerminalContribution, LifecyclePhase.Ready);
+
+registerTerminalActions();

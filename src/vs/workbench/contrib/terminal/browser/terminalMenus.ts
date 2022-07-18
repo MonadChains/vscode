@@ -190,7 +190,16 @@ export function setupTerminalMenus(): void {
 					group: ContextMenuGroup.Config
 				}
 			},
-
+			{
+				id: MenuId.TerminalInstanceContext,
+				item: {
+					command: {
+						id: TerminalCommandId.OpenWorkingDirectory,
+						title: terminalStrings.openWorkingDirectory
+					},
+					group: ContextMenuGroup.Config
+				}
+			},
 			{
 				id: MenuId.TerminalInstanceContext,
 				item: {
@@ -297,6 +306,16 @@ export function setupTerminalMenus(): void {
 					command: {
 						id: TerminalCommandId.SizeToContentWidth,
 						title: terminalStrings.toggleSizeToContentWidth
+					},
+					group: ContextMenuGroup.Config
+				}
+			},
+			{
+				id: MenuId.TerminalEditorInstanceContext,
+				item: {
+					command: {
+						id: TerminalCommandId.OpenWorkingDirectory,
+						title: terminalStrings.openWorkingDirectory
 					},
 					group: ContextMenuGroup.Config
 				}

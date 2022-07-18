@@ -54,5 +54,9 @@ export const terminalStrings = {
 	toggleSizeToContentWidth: {
 		value: localize('workbench.action.terminal.sizeToContentWidthInstance', "Toggle Size to Content Width"),
 		original: 'Toggle Size to Content Width'
+	},
+	openWorkingDirectory: {
+		value: localize('workbench.action.terminal.openWorkingDirectory', "Open the working directory"),
+		original: 'Open the working directory'
 	}
 };
